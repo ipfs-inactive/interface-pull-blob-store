@@ -11,10 +11,12 @@ module.exports = class MemoryBlobStore {
   write (key, cb) {
     cb = cb || (() => {})
 
-    this.store[key] = []
+    this.store[key] = new Buffer([])
 
     return createWrite((data, cb) => {
-      this.store[key] = this.store[key].concat(data)
+      this.store[key] = Buffer.concat(
+        [this.store[key]].concat(data)
+      )
       cb()
     }, null, 100, cb)
   }
@@ -22,7 +24,7 @@ module.exports = class MemoryBlobStore {
   read (key) {
     const place = this.store[key]
     if (place) {
-      return pull.values(this.store[key])
+      return pull.values([this.store[key]])
     }
 
     return pull.error(new Error(`Unkown key ${key}`))

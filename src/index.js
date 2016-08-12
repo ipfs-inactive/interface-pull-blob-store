@@ -1,13 +1,11 @@
 'use strict'
 
-const write = require('./write')
-const read = require('./read')
+const readWrite = require('./read-write')
 const exists = require('./exists')
 const remove = require('./remove')
 
 module.exports = (common) => {
-  write(common)
-  read(common)
+  readWrite(common)
   exists(common)
   remove(common)
 }

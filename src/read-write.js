@@ -22,18 +22,17 @@ module.exports = (common) => {
   describe('write', () => {
     it('writes the content to disk', (done) => {
       pull(
-        pull.values(['hello', 'world']),
+        pull.values([new Buffer('hello'), new Buffer('world')]),
         store.write('first', read)
       )
 
       function read (err) {
         expect(err).to.not.exist
-
         pull(
           store.read('first'),
           pull.collect((err, res) => {
             expect(err).to.not.exist
-            expect(res).to.be.eql(['hello', 'world'])
+            expect(Buffer.concat(res)).to.have.length(10)
             done()
           })
         )

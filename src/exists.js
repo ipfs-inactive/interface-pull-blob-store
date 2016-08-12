@@ -22,7 +22,7 @@ module.exports = (common) => {
   describe('exists', () => {
     it('returns true for existing key', (done) => {
       pull(
-        pull.values(['hello']),
+        pull.values([new Buffer('hello')]),
         store.write('cool', (err) => {
           expect(err).to.not.exist
 

@@ -31,7 +31,7 @@ module.exports = (common) => {
 
       function write (key, val, cb) {
         pull(
-          pull.values([val]),
+          pull.values([new Buffer(val)]),
           store.write(key, cb)
         )
       }
