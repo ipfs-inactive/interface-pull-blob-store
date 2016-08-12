@@ -12,7 +12,7 @@
 
 ## Modules that use this
 
--
+- [fs-pull-blob-store](https://github.com/ipfs/js-fs-pull-blob-store)
 
 ## API
 
