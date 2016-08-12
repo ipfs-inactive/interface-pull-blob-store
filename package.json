@@ -1,0 +1,39 @@
+{
+  "name": "interface-pull-blob-store",
+  "version": "1.0.0",
+  "description": "Test suite for pull-blob-stores",
+  "main": "lib/index.js",
+  "jsnext:main": "src/index.js",
+  "scripts": {
+    "lint": "aegir-lint",
+    "build": "aegir-build",
+    "test": "aegir-test",
+    "test:node": "aegir-test --env node",
+    "test:browser": "aegir-test --env browser",
+    "release": "aegir-release",
+    "release-minor": "aegir-release --type minor",
+    "release-major": "aegir-release --type major",
+    "coverage": "aegir-coverage",
+    "coverage-publish": "aegir-coverage publish"
+  },
+  "keywords": [
+    "pull-stream",
+    "blob store",
+    "streaming"
+  ],
+  "author": "Friedel Ziegelmayer <dignifiedquire@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "aegir": "^6.0.1"
+  },
+  "dependencies": {
+    "chai": "^3.5.0",
+    "pull-stream": "^3.4.3",
+    "pull-write": "^1.0.2",
+    "run-series": "^1.1.4"
+  },
+  "bugs": {
+    "url": "https://github.com/ipfs/interface-pull-blob-store/issues"
+  },
+  "homepage": "https://github.com/ipfs/interface-pull-blob-store"
+}
