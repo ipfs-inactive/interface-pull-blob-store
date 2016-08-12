@@ -35,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/ipfs/interface-pull-blob-store/issues"
   },
-  "homepage": "https://github.com/ipfs/interface-pull-blob-store"
+  "homepage": "https://github.com/ipfs/interface-pull-blob-store",
+  "contributors": [
+    "Friedel Ziegelmayer <dignifiedquire@gmail.com>"
+  ]
 }
