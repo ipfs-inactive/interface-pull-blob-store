@@ -38,5 +38,9 @@
   "homepage": "https://github.com/ipfs/interface-pull-blob-store",
   "contributors": [
     "Friedel Ziegelmayer <dignifiedquire@gmail.com>"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ipfs/interface-pull-blob-store.git"
+  }
 }
