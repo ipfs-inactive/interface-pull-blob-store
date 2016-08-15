@@ -37,7 +37,8 @@
   },
   "homepage": "https://github.com/ipfs/interface-pull-blob-store",
   "contributors": [
-    "Friedel Ziegelmayer <dignifiedquire@gmail.com>"
+    "Friedel Ziegelmayer <dignifiedquire@gmail.com>",
+    "Richard Littauer <richard.littauer@gmail.com>"
   ],
   "repository": {
     "type": "git",
