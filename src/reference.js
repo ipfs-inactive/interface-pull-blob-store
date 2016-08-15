@@ -11,6 +11,10 @@ module.exports = class MemoryBlobStore {
   write (key, cb) {
     cb = cb || (() => {})
 
+    if (!key) {
+      return cb(new Error('Missing key'))
+    }
+
     this.store[key] = new Buffer([])
 
     return createWrite((data, cb) => {
@@ -22,6 +26,10 @@ module.exports = class MemoryBlobStore {
   }
 
   read (key) {
+    if (!key) {
+      return pull.error(new Error('Missing key'))
+    }
+
     const place = this.store[key]
     if (place) {
       return pull.values([this.store[key]])
@@ -32,11 +40,20 @@ module.exports = class MemoryBlobStore {
 
   exists (key, cb) {
     cb = cb || (() => {})
+
+    if (!key) {
+      return cb(new Error('Missing key'))
+    }
+
     cb(null, Boolean(this.store[key]))
   }
 
   remove (key, cb) {
     cb = cb || (() => {})
+
+    if (!key) {
+      return cb(new Error('Missing key'))
+    }
 
     delete this.store[key]
     cb()

@@ -42,5 +42,18 @@ module.exports = (common) => {
         done()
       })
     })
+
+    it('missing key - cb error', (done) => {
+      store.exists(null, (err) => {
+        expect(err).to.exist
+        done()
+      })
+    })
+
+    it('missing cb - no error', () => {
+      expect(
+        () => store.exists()
+      ).to.not.throw()
+    })
   })
 }

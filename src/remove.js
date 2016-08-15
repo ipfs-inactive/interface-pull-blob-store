@@ -23,9 +23,9 @@ module.exports = (common) => {
   describe('remove', () => {
     it('deletes an existing key', (done) => {
       series([
-        (cb) => write('cool', 'hello', cb),
+        (cb) => write('remove', 'hello', cb),
         (cb) => assertExists(true, cb),
-        (cb) => store.remove('cool', cb),
+        (cb) => store.remove('remove', cb),
         (cb) => assertExists(false, cb)
       ], done)
 
@@ -37,7 +37,7 @@ module.exports = (common) => {
       }
 
       function assertExists (val, cb) {
-        store.exists('cool', (err, exists) => {
+        store.exists('remove', (err, exists) => {
           expect(err).to.not.exist
           expect(exists).to.be.eql(val)
           cb()
@@ -50,6 +50,19 @@ module.exports = (common) => {
         expect(err).to.not.exist
         done()
       })
+    })
+
+    it('missing key - cb error', (done) => {
+      store.remove(null, (err) => {
+        expect(err).to.exist
+        done()
+      })
+    })
+
+    it('missing cb - no error', () => {
+      expect(
+        () => store.remove()
+      ).to.not.throw()
     })
   })
 }
