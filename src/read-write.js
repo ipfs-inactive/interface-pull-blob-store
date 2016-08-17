@@ -39,6 +39,16 @@ module.exports = (common) => {
       }
     })
 
+    it('errors when reading missing key', (done) => {
+      pull(
+        store.read('missing'),
+        pull.onEnd((err) => {
+          expect(err).to.exist
+          done()
+        })
+      )
+    })
+
     describe('parameters', () => {
       it('write - missing key - cb errors', (done) => {
         store.write(null, (err) => {
