@@ -24,7 +24,7 @@
   "author": "Friedel Ziegelmayer <dignifiedquire@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "aegir": "^6.0.1"
+    "aegir": "^7.0.1"
   },
   "dependencies": {
     "chai": "^3.5.0",
