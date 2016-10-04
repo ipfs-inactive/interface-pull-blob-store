@@ -10,7 +10,7 @@
 
 > Test suite for pull-blob-stores
 
-A test suite and interface that can be used to implement streaming file ([blob](http://en.wikipedia.org/wiki/Binary_large_object)) storage modules for various storage backends and platforms. All streaming happens through the use of  [pull-stream](https://pull-stream.github.io/)s.
+A test suite and interface that can be used to implement streaming file ([blob](https://en.wikipedia.org/wiki/Binary_large_object)) storage modules for various storage backends and platforms. All streaming happens through the use of  [pull-stream](https://pull-stream.github.io/)s.
 
 ### Modules that use this
 
