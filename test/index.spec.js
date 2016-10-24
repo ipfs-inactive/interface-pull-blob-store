@@ -1,7 +1,7 @@
 'use strict'
 
-const MemoryBlobStore = require('../src/reference')
-const testSuite = require('../src')
+const MemoryBlobStore = require('../src')
+const testSuite = require('../src/tests')
 
 testSuite({
   setup (cb) {
