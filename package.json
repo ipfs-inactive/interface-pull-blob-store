@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "chai": "^3.5.0",
-    "pull-stream": "^3.4.3",
+    "pull-stream": "^3.5.0",
     "pull-write": "^1.0.2",
     "run-series": "^1.1.4"
   },
