@@ -1,11 +1,14 @@
 'use strict'
 
-const readWrite = require('./read-write')
-const exists = require('./exists')
-const remove = require('./remove')
+var readWrite = require('./read-write')
+var exists = require('./exists')
+var remove = require('./remove')
 
-module.exports = (common) => {
-  readWrite(common)
-  exists(common)
-  remove(common)
+module.exports = function (common) {
+  common.setup(function (err, _store) {
+    if (err) return console.log(err)
+    readWrite(_store)
+    exists(_store)
+    remove(_store)
+  })
 }
