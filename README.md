@@ -16,6 +16,7 @@ A test suite and interface that can be used to implement streaming file ([blob](
 
 - [fs-pull-blob-store](https://github.com/ipfs/js-fs-pull-blob-store)
 - [idb-pull-blob-store](https://github.com/ipfs/js-idb-pull-blob-store)
+- [level-pull-blob-store](https://github.com/ipfs/js-level-pull-blob-store)
 
 ## Table of Contents
 
