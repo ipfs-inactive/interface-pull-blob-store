@@ -2,8 +2,7 @@
   "name": "interface-pull-blob-store",
   "version": "0.6.0",
   "description": "Test suite for pull-blob-stores",
-  "main": "lib/index.js",
-  "jsnext:main": "src/index.js",
+  "main": "src/index.js",
   "scripts": {
     "lint": "aegir-lint",
     "build": "aegir-build",
@@ -24,12 +23,12 @@
   "author": "Friedel Ziegelmayer <dignifiedquire@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "aegir": "^9.3.0"
+    "aegir": "^9.4.0"
   },
   "dependencies": {
     "chai": "^3.5.0",
-    "pull-stream": "^3.4.3",
-    "pull-write": "^1.0.2",
+    "pull-stream": "^3.5.0",
+    "pull-write": "^1.1.1",
     "run-series": "^1.1.4"
   },
   "bugs": {
