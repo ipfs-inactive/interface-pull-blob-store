@@ -4,20 +4,7 @@
 const pull = require('pull-stream')
 const expect = require('chai').expect
 
-module.exports = (common) => {
-  let store
-
-  beforeEach((done) => {
-    common.setup((err, _store) => {
-      if (err) return done(err)
-      store = _store
-      done()
-    })
-  })
-
-  afterEach((done) => {
-    common.teardown(store, done)
-  })
+module.exports = (data) => {
 
   describe('exists', () => {
     it('returns true for existing key', (done) => {

@@ -4,8 +4,7 @@
 const expect = require('chai').expect
 const pull = require('pull-stream')
 
-module.exports = (common) => {
-  let store
+module.exports = (store) => {
 
   beforeEach((done) => {
     common.setup((err, _store) => {

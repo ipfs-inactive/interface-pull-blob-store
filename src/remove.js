@@ -5,20 +5,7 @@ const pull = require('pull-stream')
 const expect = require('chai').expect
 const series = require('run-series')
 
-module.exports = (common) => {
-  let store
-
-  beforeEach((done) => {
-    common.setup((err, _store) => {
-      if (err) return done(err)
-      store = _store
-      done()
-    })
-  })
-
-  afterEach((done) => {
-    common.teardown(store, done)
-  })
+module.exports = (store) => {
 
   describe('remove', () => {
     it('deletes an existing key', (done) => {
