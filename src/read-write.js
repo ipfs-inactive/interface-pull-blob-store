@@ -74,7 +74,7 @@ module.exports = (common) => {
         )
 
         // give it some time to finish the write
-        setTimeout(validateWrite, 200)
+        setTimeout(validateWrite, 1000)
         function validateWrite () {
           pull(
             store.read('hi'),
